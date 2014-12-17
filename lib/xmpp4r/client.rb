@@ -202,6 +202,8 @@ module Jabber
 
     def restart
       stop
+      while @parser_thread.alive? do
+      end
       start
     end
 
